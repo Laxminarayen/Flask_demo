@@ -5,16 +5,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Car Price Predictor</title>
 </head>
 
 <body>
-    <H1>MODEL DEPLOYMENT DEMO</H1>
-    <form action="/sub" method="post">
-        <input type="float" name="username">
-        <input type="submit">
+    <h1>Car Selling Price Predictor</h1>
+    <h3>Please enter the Detailes</h3>
+    <form action="/predict" method="post">
+        <div>
+            <label for="Car_Name">Carname: </label>
+            <input type="text" name="Car_Name" id='Car_Name'>
+        </div>
+        <div>
+            <label for="Year">Year: </label>
+            <input type="number" name="Year" id='Year'>
+        </div>
+        <div>
+            <label for="Present_Price">Current Price: </label>
+            <input type="number" step="any" name="Present_Price" id='currentPrice'>
+        </div>
+        <div>
+            <label for="Kms_Driven">KMS Driven: </label>
+            <input type="number" name="Kms_Driven" id='Kms_Driven'>
+        </div>
+        <div>
+            <label for="Fuel_Type">Choose a Fuel Type:</label>
+
+            <select name="Fuel_Type" id="Fuel_Type">
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="CNG">CNG</option>
+            </select>
+        </div>
+        <div>
+            <label for="Seller_Type">Choose a seller Type:</label>
+
+            <select name="Seller_Type" id="Seller_Type">
+                <option value="Dealer">Dealer</option>
+                <option value="Individual">Individual</option>
+            </select>
+        </div>
+        <div>
+            <label for="Transmission">Choose a Transmission Type:</label>
+
+            <select name="Transmission" id="Transmission">
+                <option value="Manual">Manual</option>
+                <option value="Automatic">Automatic</option>
+            </select>
+        </div>
+        <div>
+            <label for="Owner">Owner: </label>
+            <input type="number" name="Owner" id='Owner'>
+        </div>
+
+        <input type="Submit">
 
     </form>
+
 </body>
 
 </html>
