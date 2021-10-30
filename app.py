@@ -16,12 +16,10 @@ def hello_world():
 @app.route("/predict",methods = ['POST'])
 def predict():
     test_pd = pd.DataFrame([request.form])
-    #value = model.predict(test_pd)[0]
-    return request.form
-    '''
+    value = model.predict(test_pd)[0]
+    #return request.form
     value = str(round(value,2))
     return render_template("predict.html",price = value +" Lakhs")
-'''
 
 if __name__ == '__main__':
     app.run(debug=True)
